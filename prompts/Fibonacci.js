@@ -7,8 +7,9 @@ function fibonacci(n) {
 }
 
 button.addEventListener("click", () => {
-    const value = input.value;
-    if (typeof value === "number") {
+    const input_value = input.value;
+    const num = Number(input_value)
+    if (!isNaN(num)) {
         fib_number = fibonacci(value);
         output.textContent = "Your Fibonacci Number: " + fib_number
     }
